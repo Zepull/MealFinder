@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Zepullicious</h1>
+        <p>Find your meal here at Zepullicious!!</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="search-container" style="background-color: rgba(255, 255, 255, 0.8)">
+                <h2>Find a Meal</h2>
+                <form id="ingredient-form">
+                    <input type="text" id="ingredient-input" placeholder="Search by Ingredient">
+                    <button type="submit">Search Ingredient</button>
+                </form>
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Search Meal">
+                    <button type="submit">Search Meal</button>
+                </form>
+            </div>
+            <section>
+                <div id="ingredient-meal-cards-container" class="ingredient-meals">
+                    <h3>Meals by Ingredient</h3>
+                    <div id="ingredient-meals-list" class="meal-cards-container"></div>
+                    
+                    <h3>Related Meals</h3>
+                    <div id="related-meals-list" class="meal-cards-container"></div>
+                </div> 
+            </section>                              
+            <section id="meal-info">
+                <h2>Meal Details</h2>
+                <h3 id="meal-name">Meal Name</h3>
+                <img id="meal-image" src="#" alt="Meal Image">
+                <p id="meal-category">Category: </p>
+                <p id="meal-area">Area: </p>
+                <p id="meal-description">Description: </p>
+                <h3>Ingredients</h3>
+                <ul id="ingredients-list"></ul>
+                <h3>Instructions</h3>
+                <p id="meal-instructions"></p>
+                <a id="youtube-link" href="#" target="_blank">Watch on YouTube</a>
+                <button id="add-to-planner-btn">Add to Planner</button>
+            </section>
+            <section id="planner-container">
+                <div class="planner-section">
+                    <div id="meal-planner">
+                        <h2>Meal Planner</h2>
+                        <ul id="meal-list"></ul>
+                    </div>
+                    <div id="grocery-list">
+                        <h2>Grocery List</h2>
+                        <form id="grocery-form">
+                            <input type="text" id="grocery-input" placeholder="Add item to grocery list" required>
+                            <button type="submit">Add Item</button>
+                        </form>
+                        <ul id="grocery-list-items"></ul>
+                    </div>
+                </div>
+                <button id="saveToFileBtn">Save to File.txt</button>
+            </section>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
